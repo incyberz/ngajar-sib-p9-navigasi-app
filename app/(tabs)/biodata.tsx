@@ -1,19 +1,23 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-const Hero = () => {
+const Biodata = () => {
   return (
     <View style={styles.container}>
-      {/* Menambahkan Gambar */}
-      <Image
-        source={require("../../assets/images/foto.jpg")}
-        style={styles.image}
-      />
+      {/* Nama Field dan Isi */}
+      <Text style={styles.label}>NIM:</Text>
+      <Text style={styles.text}>12345678</Text>
 
-      {/* Paragraf Sebelum NIM */}
-      <Text style={styles.paragraph}>
-        Saya adalah seorang programmer yang males ngoding, pake ChatGPT aja!
-      </Text>
+      <Text style={styles.label}>Nama:</Text>
+      <Text style={styles.text}>Iin Sholihin</Text>
+
+      <Text style={styles.label}>Alamat:</Text>
+      <Text style={styles.text}>Tanjungsari - Sumedang</Text>
+
+      <Text style={styles.label}>Hobby:</Text>
+      <Text style={styles.text}>1. Coding</Text>
+      <Text style={styles.text}>2. Farming</Text>
+      <Text style={styles.text}>3. Hiking</Text>
     </View>
   );
 };
@@ -40,6 +44,18 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20, // Menambah jarak di kanan kiri
   },
+  label: {
+    fontSize: 24,
+    fontWeight: "bold", // Nama field menjadi tebal
+    color: "darkblue", // Warna teks biru tua
+    marginBottom: 5,
+    marginLeft: 20,
+  },
+  text: {
+    fontSize: 18,
+    marginBottom: 10,
+    marginLeft: 20,
+  },
 });
 
-export default Hero;
+export default Biodata;
